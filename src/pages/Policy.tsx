@@ -1,5 +1,5 @@
 import { Navbar } from "../components/Navbar";  
-import { Footer } from "../components/Footer";
+import { Footer2 } from "../components/Footer2";
 import { PolicyText } from "../components/PolicyText";
 
 export function Policy() {
@@ -7,7 +7,7 @@ export function Policy() {
         <div>
             <Navbar />
             <PolicyText />
-            <Footer />
+            <Footer2 />
         </div>
         
     );

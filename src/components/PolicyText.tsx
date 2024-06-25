@@ -1,6 +1,6 @@
 export function PolicyText() {
   return (
-    <div className="pdf-image-container flex justify-center items-center -mb-44">
+    <div className="pdf-image-container flex justify-center items-center">
       <img
         src="/policy.jpg"
         alt="Document"
