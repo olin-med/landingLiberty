@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes expand-large {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 29%;
+  }
+}
+
+@keyframes expand-small {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.cyan-line {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .animate-line {
+    animation: expand-large 1.5s ease-out forwards;
+  }
+}
+
+@media (max-width: 767px) {
+  .animate-line {
+    animation: expand-small 1.5s ease-out forwards;
+  }
+}
+
+.policy-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .policy-page .navbar, .policy-page .footer {
+    transition: all 1s ease;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .policy-page .footer {
+        height: 84.5vh;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        transition: all 1s ease;
+      }
+  }
+  
+  @media (max-width: 767px) {
+    .policy-page .footer {
+        height: 87.5vh;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        transition: all 1s ease;
+      }
+  }
+  
+  .policy-page.animate-footer .footer {
+    animation: slideOut 4s forwards 0.5s, reposition 2s forwards 4s;
+  }
+    
+  @keyframes slideOut {
+    0% {
+      transform: translateY(0);
+    }
+    10%{
+        transform: translateY(-5vh);
+    }
+    100% {
+      transform: translateY(150vh);
+    }
+  }
+  
+  @keyframes reposition {
+    from {
+      transform: translateY(150vh);
+      position: fixed;
+    }
+    to {
+      transform: translateY(0);
+      position: relative;
+      height: auto;
+    }
+  }
+  
+  .policy-page .repositioned-footer {
+    position: relative;
+    height: auto;
+  }
+  
+  
+  
+  
+  /*@keyframes slideDown {
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}*/

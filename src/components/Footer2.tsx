@@ -1,11 +1,12 @@
 
 import { useNavigate } from 'react-router-dom';
+import '../global.css';
 
 export function Footer2() {
   const navigate = useNavigate();
 
   return (
-    <footer className="flex flex-col md:flex-row justify-between items-center gap-5 self-stretch px-5 md:px-20 py-4 mt-10 md:mt-44 w-full text-3xl bg-liberty-cyan">
+    <footer className="footer flex flex-col md:flex-row justify-between items-center gap-5 self-stretch px-5 md:px-20 py-4 mt-10 md:mt-44 w-full text-3xl bg-liberty-cyan">
       <img
         loading="lazy"
         src="/logo2.png"
